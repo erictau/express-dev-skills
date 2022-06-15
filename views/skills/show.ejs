@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+    <body>
+        <%- include('../partials/navbar') %>
+            <main>
+                <div class="card m-auto" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"> <%=skill.name%> </h5>
+                      <h6 class="card-subtitle mb-2 text-muted"> Level: <%=skill.level%> </h6>
+                      <p class="card-text"> <%=skill.description%> </p>
+                    </div>
+                  </div>
+            </main>
+    </body>
+
+</html>

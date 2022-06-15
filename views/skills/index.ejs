@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/navbar') %>
+            <main>
+                <h1>Skills</h1>
+                <ul>
+                    <% skills.forEach(skill=> {%>
+                        <li>
+                            <a href="/skills/<%=skill.name%>"><%=skill.name%>: Level <%=skill.level%></a>
+                        </li>
+                    <%})%>
+                </ul>
+            </main>
+    </body>
+
+</html>
