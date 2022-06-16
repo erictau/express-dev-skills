@@ -47,12 +47,6 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-    const skill = Skill.getOne(req.params.name);
-    const updatedSkill = req.body;
-    updatedSkill.level = parseInt(updatedSkill.level);
-    for (let prop in updatedSkill) {
-        skill[prop] = updatedSkill[prop];
-    }
-
+    Skill.update(req.params.name, req.body);
     res.redirect('/skills');
 }

@@ -9,7 +9,8 @@ module.exports = {
     getAll,
     getOne,
     addSkill,
-    deleteSkill
+    deleteSkill, 
+    update
 }
 
 function getAll() {
@@ -28,4 +29,13 @@ function addSkill(skill) {
 function deleteSkill(skillName) {
     const idx = skills.findIndex(skill => skill.name === skillName);
     skills.splice(idx, 1);
+}
+
+function update(name, updates) {
+    const skill = getOne(name);
+    updates.level = parseInt(updates.level);
+
+    for (let prop in updates) {
+        skill[prop] = updates[prop];
+    }
 }
