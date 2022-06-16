@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/navbar') %>
+      <main>
+        <form action="/skills/<%= skill.name %>?_method=PUT" method="POST">
+          <div class="card m-auto mt-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">
+                <input class="form-control form-control-sm" name="name" value="<%=skill.name%>">
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                Level: 
+                <input class="form-control form-control-sm" name="level" value="<%=skill.level%>">
+              </h6>
+              <p class="card-text">
+                <textarea class="form-control form-control-sm" name="description"><%=skill.description%></textarea>
+              </p>
+              <div class="container btn-row">
+                <div class="container-btn">
+                  <button class="btn btn-sm btn-primary" type="submit">Submit Changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </main>
+  </body>
+
+</html>

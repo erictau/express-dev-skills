@@ -11,12 +11,17 @@ router.get('/', skillsCtrl.index);
 router.get('/new', skillsCtrl.new);
 // GET Show
 router.get('/:name', skillsCtrl.show);
+// GET Edit
+router.get('/:name/edit', skillsCtrl.edit);
 
 // POST Create
 router.post('/', skillsCtrl.create);
 
 // DELETE Delete
 router.delete('/:name', skillsCtrl.delete);
+
+// PUT Update
+router.put('/:name', skillsCtrl.update);
 
 // Export
 module.exports = router;

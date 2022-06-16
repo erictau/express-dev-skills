@@ -27,4 +27,9 @@ form > div.container-btn {
   margin: 5px;
 }
 
+div.btn-row {
+  display: flex;
+  justify-content: center;
+}
+
 /* End of Forms */

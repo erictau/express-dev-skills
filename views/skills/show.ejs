@@ -4,16 +4,23 @@
     <body>
         <%- include('../partials/navbar') %>
             <main>
-                <div class="card m-auto" style="width: 18rem;">
+                <div class="card m-auto mt-3" style="width: 18rem;">
                     <div class="card-body">
                       <h5 class="card-title"> <%=skill.name%> </h5>
                       <h6 class="card-subtitle mb-2 text-muted"> Level: <%=skill.level%> </h6>
-                      <p class="card-text"> <%=skill.description%> </p>  
-                      <form action="/skills/<%= skill.name %>?_method=DELETE" method="POST">
-                        <div class="container-btn">
-                          <button class="btn btn-sm btn-danger" type="submit">Delete</button>
-                        </div>
-                      </form>
+                      <p class="card-text"> <%=skill.description%> </p> 
+                      <div class="container btn-row"> 
+                        <form action="/skills/<%= skill.name %>?_method=DELETE" method="POST">
+                          <div class="container-btn">
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                          </div>
+                        </form>
+                        <form action="/skills/<%= skill.name %>/edit" method="GET">
+                          <div class="container-btn">
+                            <button class="btn btn-sm btn-secondary" type="submit">Edit</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>  
                   </div>
             </main>
