@@ -8,8 +8,13 @@
                     <div class="card-body">
                       <h5 class="card-title"> <%=skill.name%> </h5>
                       <h6 class="card-subtitle mb-2 text-muted"> Level: <%=skill.level%> </h6>
-                      <p class="card-text"> <%=skill.description%> </p>
-                    </div>
+                      <p class="card-text"> <%=skill.description%> </p>  
+                      <form action="/skills/<%= skill.name %>?_method=DELETE" method="POST">
+                        <div class="container-btn">
+                          <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                        </div>
+                      </form>
+                    </div>  
                   </div>
             </main>
     </body>

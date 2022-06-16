@@ -4,7 +4,8 @@ module.exports = {
     index,
     show,
     new: newSkill,
-    create
+    create,
+    delete: deleteSkill
 }
 
 function index(req, res) {
@@ -27,8 +28,12 @@ function newSkill(req, res) {
 
 function create(req, res) {
     const skill = req.body;
-    console.log(skill);
     skill.level= parseInt(skill.level);
     Skill.addSkill(skill);
+    res.redirect('/skills');
+}
+
+function deleteSkill(req, res) {
+    Skill.deleteSkill(req.params.name);
     res.redirect('/skills');
 }
