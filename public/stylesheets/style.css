@@ -12,3 +12,19 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* Forms */
+form > h2 {
+  text-align: center;
+}
+
+form > div.container {
+  width: 30%;
+}
+
+form > div.container-btn {
+  text-align: center;
+  margin: 5px;
+}
+
+/* End of Forms */

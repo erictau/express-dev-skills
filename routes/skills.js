@@ -7,8 +7,14 @@ const skillsCtrl = require('../controllers/skills');
 /* Routes */
 // GET Index
 router.get('/', skillsCtrl.index);
-
+// GET New
+router.get('/new', skillsCtrl.new);
 // GET Show
 router.get('/:name', skillsCtrl.show);
 
+
+// POST Create
+router.post('/', skillsCtrl.create);
+
+// Export
 module.exports = router;

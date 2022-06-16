@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/navbar') %>
+            <main>
+                <form class="form-group" action="/skills" method="POST">
+                    <h2>Add New Skill</h2>
+                    <div class="container">
+                        <label for="name">Skill:</label>
+                        <input class="form-control form-control-sm" type="text" name="name" autocomplete="off">
+                    </div>
+                    <div class="container">
+                        <label for="level">Skill Level:</label>
+                        <input class="form-control form-control-sm" type="number" name="level" autocomplete="off">
+                    </div>
+                    <div class="container">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control form-control-sm" name="description"></textarea>
+                    </div>
+                    <div class="container-btn">
+                        <button class="btn btn-sm btn-primary" type="submit">Add Skill</button>
+                    </div>
+                </form>
+            </main>
+    </body>
+
+</html>
